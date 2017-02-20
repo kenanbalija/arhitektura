@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
   <nav class="nav-side-menu">
       <div class="brand"><img src="{{ asset('img/logoWh.png') }}" alt=""></div>
       <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
@@ -32,6 +29,11 @@
                   </a>
               </li>
               <li>
+                  <a href="{{ url('/mk' )}}">
+                       МК
+                  </a>
+              </li>
+              <li>
                   <a href="#">
                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
                   </a>
@@ -42,5 +44,3 @@
           </ul>
       </div>
   </nav>
-
-@endsection

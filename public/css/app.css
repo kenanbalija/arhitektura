@@ -155,3 +155,13 @@ body {
   margin: 0px;
   padding: 0px;
 }
+/* everything goes here */
+.holder {
+  position: relative;
+  left: 300px;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/c1.jpg');
+}
+
+

@@ -9,14 +9,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/simple-sidebar.css') }}" rel="stylesheet">
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.css">
         <!--  Boostrap css file  -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Scripts -->
         <!--  Boostrap js file  -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         
     <script>
         window.Laravel = {!! json_encode([
@@ -26,6 +30,8 @@
 </head>
 <body>
     <div id="app">
+        <div class="wrapper">
+
         <!-- <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -81,13 +87,49 @@
             </div>
         </nav> -->
 
-        @yield('content')
-    </div>
+        <!-- <a href=".menu-toggle" class="btn btn-default menu-toggle">Toggle Menu</a> -->
+        
+            @yield('content')
 
+        </div>
+    </div>
+    <!-- Dropzone -->
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $(".menu-toggle").click(function(e) {
+        e.preventDefault();
+        $(".wrapper").toggleClass("toggled");
+    });
+        $('.carousel').carousel({
+       interval: 3000
+    })
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.js.map"></script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".flash_message").delay(3000).fadeOut(500);
+        });
+    </script>
+    <script src="//cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'novost_body' );
+    </script>
+    <script>
+        CKEDITOR.replace( 'novost_body_mk' );
+    </script>
 </body>
 </html>

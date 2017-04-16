@@ -14,7 +14,7 @@
                     <a href="{{url('/mk/projects')}}">Проекти</a>
                 </li>
                 <li>
-                    <a href="{{url('/mk/studio')}}">Студио</a>
+                    <a href="{{url('/mk/studio')}}">Студио 4a</a>
                 </li>
                 <li>
                     <a href="{{url('mk/contact')}}">Контакт</a>

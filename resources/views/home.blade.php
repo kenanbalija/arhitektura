@@ -3,7 +3,6 @@
 @section('content')
 @include('navigations.english')
 
-<!-- Page Content -->
         <div class="page-content-wrapper">
             <div class="container" style="padding: 0;">
                 <div class="row-fluid">
@@ -29,5 +28,4 @@
                 </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
 @endsection

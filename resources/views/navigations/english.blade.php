@@ -14,7 +14,7 @@
                     <a href="{{url('projects')}}">Projects</a>
                 </li>
                 <li>
-                    <a href="{{url('studio')}}">Studio</a>
+                    <a href="{{url('studio')}}">Studio 4a</a>
                 </li>
                 <li>
                     <a href="{{url('contact')}}">Contact</a>

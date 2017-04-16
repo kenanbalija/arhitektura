@@ -3,9 +3,9 @@
 @section('content')
 @include('navigations.english')
 
-<br>
 
       <div class="container">
+      <h1 style="text-align: left; margin-left: 15px; font-weight: 700;">NEWS</h1>
           <div class="row">
               <!-- <div class="col-md-6">
                   <img src="img/02.png" class="img-responsive">
@@ -14,9 +14,8 @@
                   <div class="about-text">
                       <div class="section-title">
                           <!-- <h4></h4> -->
-                          <h2 style="text-align: center;"><strong>News</strong></h2>
-
-                          <div style="width: 60px; margin: 0 auto;" class="clearfix"><hr></div>
+                          
+        </div>
                       </div>
                       <div>
                           @if(Auth::user())
@@ -39,7 +38,7 @@
                               {!! $news->novost_body !!}
                               </div>
                           </div>
-                            </a><br>
+                            </a>
                           @endforeach
                       </div>
                   </div>

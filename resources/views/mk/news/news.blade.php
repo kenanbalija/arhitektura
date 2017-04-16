@@ -3,28 +3,27 @@
 @section('content')
 @include('navigations.macedonian')
 
-<br>
 
       <div class="container">
+      <h1 style="text-align: left; margin-left: 15px; font-weight: 700;">ВЕСТИ</h1>
           <div class="row">
               <!-- <div class="col-md-6">
                   <img src="img/02.png" class="img-responsive">
               </div> -->
-              <div class="col-md-12">
+              <div class="col-xs-12">
                   <div class="about-text">
                       <div class="section-title">
                           <!-- <h4></h4> -->
-                          <h2 style="text-align: center;"><strong>Вести</strong></h2>
-
-                          <div style="width: 60px; margin: 0 auto;" class="clearfix"><hr></div>
+                          
+        </div>
                       </div>
                       <div>
                           @if(Auth::user())
-                            <a class="btn btn-warning col-xs-12" href="{{url('/news/write')}}">Create new</a>
+                            <a class="btn btn-warning col-xs-12" href="{{url('/news/write')}}">Креирај нова</a>
                               <br>
                           @endif
                       </div>
-                      <div class="novosti_home row">
+                      <div class="row">
                       @foreach ($novosti as $news)
                           <div class="col-xs-12 col-sm-6">
                               <a href="{{ url('/news/update/'.$news->id )}}">
@@ -39,7 +38,7 @@
                               {!! $news->novost_body_mk !!}
                               </div>
                           </div>
-                            </a><br>
+                            </a>
                           @endforeach
                       </div>
                   </div>
@@ -52,3 +51,4 @@
           </div><br>
 
 @endsection
+

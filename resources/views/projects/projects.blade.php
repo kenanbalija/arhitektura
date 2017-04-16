@@ -3,6 +3,7 @@
 @section('content')
 @include('navigations.english')
     <div class="container">
+    <h1 style="text-align: left; margin-left: 15px; font-weight: 700;">PROJECTS</h1>
         <div class="row">
             @foreach ($albums as $album)
                 <div class="col-xs-12 col-sm-6">
